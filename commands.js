@@ -1349,7 +1349,8 @@ var commands = exports.commands = {
 			return connection.sendTo(target, "|noinit|joinfailed|The room '"+target+"' could not be joined.");
 		}
 		if (target.toLowerCase() == "lobby") {
-			return connection.sendTo('lobby','|html|<div class="infobox" style="border-color:blue"><center><b><u>Welcom To The Armageddon Server!</u></b></center><br /> ' +
+			return connection.sendTo('lobby', '|html|<div class = "infobox"><center><a href="http://armageddonleague.weebly.com/"><img src="http://oi44.tinypic.com/2gsjtc4.jpg"></a><center><br />' +
+			'<center><b><u>Welcome to the Kill The Noise Server!</u></b></center><br />'+
 			'Battle users in the ladder or in tournaments, learn how to play Pokemon or just chat in lobby!<br /><br />'+ 
 			'If you have any questions, issues or concerns,they should be directed at someone with a rank such as Moderator (@) and Leader (&). <br /><br />' +
 			'Only serious issues or questions should be directed to Administrators (~).<br /><br />' +
