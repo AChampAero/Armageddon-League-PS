@@ -451,7 +451,7 @@ var commands = exports.commands = {
 		user.money = money;
 		var price = 0;
 		if (target === 'symbol') {
-			price = 5;
+			price = 10;
 			if (price <= user.money) {
 				user.money = user.money - price;
 				this.sendReply('You have purchased a custom symbol. You will have this until you log off for more than an hour.');
@@ -463,7 +463,7 @@ var commands = exports.commands = {
 			}
 		}
 		if (target === 'custom') {
-			price = 20;
+			price = 30;
 			if (price <= user.money) {
 				user.money = user.money - price;
 				this.sendReply('You have purchased a custom avatar. You need to message an Admin capable of adding (Ask BlakJack or Skarr).');
@@ -474,7 +474,7 @@ var commands = exports.commands = {
 			}
 		}
 		if (target === 'animated') {
-			price = 35;
+			price = 43;
 			if (price <= user.money) {
 				user.money = user.money - price;
 				this.sendReply('You have purchased a custom animated avatar. You need to message an Admin capable of adding (BlakJack or Skarr).');
@@ -496,7 +496,7 @@ var commands = exports.commands = {
 			}
 		}
 		if (target === 'trainer') {
-			price = 30;
+			price = 50;
 			if (price <= user.money) {
 				user.money = user.money - price;
 				this.sendReply('You have purchased a trainer card. You need to message an Admin capable of adding this (BlakJack or Skarr).');
@@ -507,7 +507,7 @@ var commands = exports.commands = {
 			}
 		}
 		if (target === 'fix') {
-			price = 10;
+			price = 20;
 			if (price <= user.money) {
 				user.money = user.money - price;
 				this.sendReply('You have purchased the ability to alter your avatar or trainer card. You need to message an Admin capable of adding this (BlakJack or Skarr).');
@@ -518,7 +518,7 @@ var commands = exports.commands = {
 			}
 		}
 		if (target === 'declare') {
-			price = 25;
+			price = 30;
 			if (price <= user.money) {
 				user.money = user.money - price;
 				this.sendReply('You have purchased the ability to declare (from Admin). To do this message an Admin (~) with the message you want to send. Keep it sensible!');
@@ -617,18 +617,17 @@ var commands = exports.commands = {
 	},
 
 
-
 	
 	shop: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('<center><h4><b><u>Kill The Noise Shop</u></b></h4><table border="1" cellspacing ="0" cellpadding="3"><tr><th>Command</th><th>Description</th><th>Cost</th></tr>' +
-			'<tr><td>Symbol</td><td>Buys a custom symbol to go infront of name and puts you at top of userlist (temporary until restart)</td><td>5</td></tr>' +
-			'<tr><td>Custom</td><td>Buys a custom avatar to be applied to your name (you supply)</td><td>20</td></tr>' +
+		this.sendReplyBox('<center><h4><b><u>Armageddon Exchange Mart</u></b></h4><table border="1" cellspacing ="0" cellpadding="3"><tr><th>Command</th><th>Description</th><th>Cost</th></tr>' +
+			'<tr><td>Symbol</td><td>Buys a custom symbol to go infront of name and puts you at top of userlist (temporary until restart)</td><td>10</td></tr>' +
+			'<tr><td>Custom</td><td>Buys a custom avatar to be applied to your name (you supply)</td><td>30</td></tr>' +
 			'<tr><td>Animated</td><td>Buys an animated avatar to be applied to your name (you supply)</td><td>35</td></tr>' +
 			'<tr><td>Room</td><td>Buys a chatroom for you to own (within reason, can be refused)</td><td>100</td></tr>' +
-			'<tr><td>Trainer</td><td>Buys a trainer card which shows information through a command such as /blakjack (note: third image costs 10 bucks extra, ask for more details)</td><td>40</td></tr>' +
-			'<tr><td>Fix</td><td>Buys the ability to alter your current custom avatar or trainer card (don\'t buy if you have neither)!</td><td>10</td></tr>' +
-			'<tr><td>Declare</td><td>You get the ability to get two declares from an Admin in lobby. This can be used for league advertisement (not server)</td><td>25</td></tr>' +
+			'<tr><td>Trainer</td><td>Buys a trainer card which shows information through a command such as /aero(note: third image costs 20 bucks extra, ask for more details)</td><td>50</td></tr>' +
+			'<tr><td>Fix</td><td>Buys the ability to alter your current custom avatar or trainer card (don\'t buy if you have neither)!</td><td>20</td></tr>' +
+			'<tr><td>Declare</td><td>You get the ability to get two declares from an Admin in lobby. This can be used for league advertisement (not server)</td><td>35</td></tr>' +
 			'</table><center><table border="1" cellspacing ="0" cellpadding="4"><tr><th>Command</th><th>change converter!</th><th>PAYOUT</th></tr>' +
 		        '<tr><td>coin</td><td>Turns <b>100 bucks</b> into <b>1 coin</b>!</td><td>1 coin</td></tr>' +
 		        '<tr><td>buck</td><td>Turns <b>1 coin</b> into <b>100 bucks</b>!</td><td>100 bucks</td></tr>' +
@@ -1351,10 +1350,10 @@ var commands = exports.commands = {
 		}
 		if (target.toLowerCase() == "lobby") {
 			return connection.sendTo('lobby','|html|<div class="infobox" style="border-color:blue"><center><b><u>Welcome to the Kill The Noise Server!</u></b></center><br /> ' +
-			'Battle users in the ladder or in tournaments, learn how to play Pokemon or just chat in lobby!<br /><br />' +
-			'Make sure to type <b>/help</b> to get a list of commands that you can use and <b>/faq</b> to check out frequently asked questions.<br /><br />' +
-			'If you have any questions, issues or concerns should be directed at someone with a rank such as Voice (+), Driver (%), Moderator (@) and Leader (&). <br /><br />' +
+			'Battle users in the ladder or in tournaments, learn how to play Pokemon or just chat in lobby!<br /><br />' 
+			'If you have any questions, issues or concerns,they should be directed at someone with a rank such as Moderator (@) and Leader (&). <br /><br />' +
 			'Only serious issues or questions should be directed to Administrators (~).<br /><br />' +
+			'Enjoy your stay!.<br /><br />' +
 			'</div>');
 		}
 		
@@ -2077,7 +2076,7 @@ var commands = exports.commands = {
                 if (!target) return this.parse('/pmall [message] - Sends a PM to every user in a room.');
                 if (!this.can('pmall')) return false;
 
-                var pmName = '~Armageddon PM [Do not reply]';
+                var pmName = '~Armageddon Server';
 
                 for (var i in Users.users) {
                         var message = '|pm|'+pmName+'|'+Users.users[i].getIdentity()+'|'+target;
