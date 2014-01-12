@@ -754,6 +754,57 @@ var commands = exports.commands = {
 			'# <b>Room Owner</b> - They are administrators of the room and can almost totally control it');
 	},
 	
+	aero: function(target, room, user) {  
+                 if (!this.canBroadcast()) return;
+                 this.sendReplyBox('<center><img src="http://i.imgur.com/CNS2O84.png"><img src="http://oi43.tinypic.com/w8pym9.jpg"><br><font color="black"><b> Ace:</font><font color="darkpurple"><blink> Ho Oh-Lugia </font></blink><br><i><font color="aqua"> A Dragon Is Just A Dragon, Strong Or Weak, They Can Easily Be Taken Down. But You Must Find Their Weakness, And Beat Them, Before They Beat You.')},
+sooper: function(target, room, user) {  
+                 if (!this.canBroadcast()) return;                
+             	this.sendReplyBox('<center><img src="http://i.imgur.com/HkfrzAI.gif">')},								
+sops4nd: function(target, room, user) {  
+                 if (!this.canBroadcast()) return;                
+             	this.sendReplyBox('<center><img src="http://i.imgur.com/tFJawMC.png"><img src="http://armageddonleague.weebly.com/uploads/2/2/3/5/22357012/2100071_orig.png"><br><font color="black"><b> Ace:</font><font color="brown"><blink> Mega Aerodactyl </font></blink><br><i><font color="black"> The Stone Guardian that Protects All')},						
+losedude: function(target, room, user) {  
+                 if (!this.canBroadcast()) return;                
+             	this.sendReplyBox('<center><img src="http://armageddonleague.weebly.com/uploads/2/2/3/5/22357012/8572553.png?335"><img src="http://armageddonleague.weebly.com/uploads/2/2/3/5/22357012/4026120_orig.png"><br><font color="black"><b> Ace:</font><font color="hotpink"><blink> Toxicroak </font></blink><br><i><font color="black"> Losedude in this b*tch like Gunk Shot')},							
+theone: function(target, room, user){
+				if(!this.canBroadcast()) return;
+				this.sendReplyBox('<center><img src="http://i.imgur.com/oP6mB5B.png"><img src="http://i.imgur.com/IuP7Xsi.png"><br><font color="black"><b> Ace:</font><br><font color="blue"><blink> Darkrai </font></blink><br><i><font color="red"> "YOLO SWAG Badge, U WANT IT? THEN GO GET IT."')},	
+scizor: function(target, room, user) {  
+                 if (!this.canBroadcast()) return;                
+             	this.sendReplyBox('<center><img src="http://i43.tinypic.com/qrackw.jpg">')},								
+tacos: function(target, room, user) {  
+                 if (!this.canBroadcast()) return;                
+             	this.sendReplyBox('<center><img src="http://i.imgur.com/wBstP1l.png"><img src="http://oi39.tinypic.com/x5r3hv.jpg"><br><font color="black"><b> Ace:</font><font color="darkgray"><blink> Mega-Lucario </font></blink><br><i><font color="black"> That will be $1.99 sir, your tacos are at the next window! Have a nice day!:D.')},									
+simo: function(target, room, user) {  
+                 if (!this.canBroadcast()) return;                
+             	this.sendReplyBox('<center><img src="http://i.imgur.com/DFx5ABZ.png"><img src="http://oi42.tinypic.com/ir1bg9.jpg"><br><font color="black"><b> Ace:</font><font color="yellowgreen"><blink> Yanmega </font></blink><br><i><font color="black"> Bugs,Bugs,BUGS!!')},									
+togeon: function(target, room, user) {  
+                 if (!this.canBroadcast()) return;                
+             	this.sendReplyBox('<center><img src="http://i.imgur.com/ymTwCWX.png"><img src="http://oi39.tinypic.com/21mzyvr.jpg"><br><font color="black"><b> Ace:</font><font color="gold"><blink> Jolteon </font></blink><br><i><font color="black"> Prepared to be electrified with cuteness :]')},										
+chunk: function(target, room, user){
+				if(!this.canBroadcast()) return;
+				this.sendReplyBox('<img src="http://i.imgur.com/RYpDFXt.png" /><img src="http://i.imgur.com/Q6fN9Pr.png" /><br><font color="black"><b> Ace:</font><br><font color= "red"><blink> Heracross </font></blink><br><i><font color="blue"> "doc are you telling me its 8:25? im late school!"')},	
+tchin: function(target, room, user){
+				if(!this.canBroadcast()) return;
+				this.sendReplyBox('<img src="http://i.imgur.com/7Koe3pl.jpg" /><img src="http://i.imgur.com/joZIM4y.png" /><br><font color="black"><b> Ace:</font><br><font color= "Yellow"><blink> Aegislash </font></blink><br><i><font color="blue"> "I hide in the shadows , come and find me..."')},
+clumzzy: function(target, room, user){
+				if(!this.canBroadcast()) return;
+				this.sendReplyBox('<img src="http://i.imgur.com/DZjP3Vd.png" /><img src="http://i.imgur.com/1rW7t39.png" /><br><font color="black"><b> Ace:</font><br><font color= "red"><blink> Mega Mawile </font></blink><br><i><font color="purple"> "Hey Im ALeader Clumzzy, and in my gym. Dont drop that thun thun thun, eyyy, dont drop that thun thun thuunnnn!."')},
+lavxen: function(target, room, user) {  
+                 if (!this.canBroadcast()) return;                
+             	this.sendReplyBox('<center><img src="http://i.imgur.com/0S08cxO.jpg">')},		
+takashi: function(target, room, user) {  
+                 if (!this.canBroadcast()) return;                
+             	this.sendReplyBox('<center><img src="http://i.imgur.com/XCQMLLl.jpg">')},	
+kinjiro: function(target, room, user) {  
+                 if (!this.canBroadcast()) return;                
+             	this.sendReplyBox('<center><img src="http://i.imgur.com/mSSRZzT.jpg">')},				
+deo: function(target, room, user) {  
+                 if (!this.canBroadcast()) return;                
+             	this.sendReplyBox('<center><img src="http://i.imgur.com/Ched3WR.jpg">')},			
+blak: function(target, room, user){
+				if(!this.canBroadcast()) return;
+				this.sendReplyBox('<center><img src="http://i.imgur.com/otDPUQU.png"><br><img src="http://i.imgur.com/Wdthjon.png"><img src="http://i.imgur.com/dck9vdP.png"><img src="http://i.imgur.com/5VqH7tF.png"><br><font color="brown"><blink>Ace: Swellow</blink><br><font color="brown"> Haters Gonna Hate, Potatotes Gonna Potate But Aero\'s Gonna Masturbate!.')},
 	
 	opensource: function(target, room, user) {
 		if (!this.canBroadcast()) return;
