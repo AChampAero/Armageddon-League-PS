@@ -145,7 +145,9 @@ exports.customavatars = {
 		'sooperpooper': 'pikachu-3.gif',
 		'epicman2514': 'aegislash-edge-s.gif',
 		'sligooooo': 'sliggoo-2.gif',
+
 };
+
 
 // appealurl - specify a URL containing information on how users can appeal
 // disciplinary actions on your section. You can also leave this blank, in
