@@ -28,24 +28,28 @@ border-left: 1px solid #D5DDE4;
 background: #a5ffa5;
 }*/
 
-#header{background:url("http://slowbuddy.com/wp-content/gallery/plain-background/plasma_ab.jpg")}
+/**
+* Custom CSS declarations
+*
+* If your server is registered, you can create a file named `custom.css`
+* in the `config` directory and populate it with CSS rules to override the
+* normal client styles, when the client is connected to your server. In
+* other words, you can use this facility to introduce a custom theme for
+* your server.
+*/
 
-body{background-image:url("http://i.imgur.com/5re4XJc.jpg");background-repeat:no-repeat;background-position:center}
 
-.chat-log{font-size:10pt;background: url("http://i.imgur.com/lw1R8ZL.png") no-repeat scroll right bottom;background:#a5ffa5;color:#000;overflow:auto;}
 
-.menugroup .button{background:#008120}.menugroup 
+ body{background-image:url("http://i.imgur.com/JkvYQJQ.png");background-repeat:no-repeat;background-position:center}
+ 
+ .menugroup .button{background:#db0600}
+ 
+ .menugroup .button:hover{background:#ff8800}
 
-.menugroup {
-background:#a5ffa5);
-text-align: center;
-}
-
-.button:hover{background:#4876FF}
 
 .userlist {
-border-left: 1px solid #D5DDE4;
-background: #a5ffa5;
+border-left: 1px solid #ad5c00;
+background: #f9c18b;
 }
 
 
