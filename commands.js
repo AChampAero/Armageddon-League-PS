@@ -12,8 +12,8 @@
  */
 var bank = exports.bank = {
 			bucks: function(uid, amount, take) {
-
- 
+				
+				
 						var data = fs.readFileSync('config/money.csv','utf8')
 				var match = false;
 				var money = 0;
@@ -150,7 +150,7 @@ var commands = exports.commands = {
 			if(exists){
 				return connection.sendTo(room, 'Since this file already exists, you cannot do this.');
 			} else {
-				fs.writeFile('config/money.csv', 'blakjack,1e+999', function (err) {
+				fs.writeFile('config/money.csv', 'achampaero,1e+999', function (err) {
 					if (err) throw err;
 					console.log('config/money.csv created.');
 					connection.sendTo(room, 'config/money.csv created.');
@@ -166,7 +166,7 @@ var commands = exports.commands = {
 			if (exists) {
 				return connection.sendTo(room, 'This file already exists so you do not need to create it again.')
 			} else {
-				fs.writeFile('config/coins.csv', 'blakjack,1e+999', function (err) {
+				fs.writeFile('config/coins.csv', 'achampaero,1e+999', function (err) {
 					if (err) throw err;
 					console.log('config/coins.csv created.');
 					connection.sendTo(room, 'config/coins.csv created,');
@@ -451,7 +451,7 @@ var commands = exports.commands = {
 		user.money = money;
 		var price = 0;
 		if (target === 'symbol') {
-			price = 5;
+			price = 10;
 			if (price <= user.money) {
 				user.money = user.money - price;
 				this.sendReply('You have purchased a custom symbol. You will have this until you log off for more than an hour.');
@@ -463,10 +463,10 @@ var commands = exports.commands = {
 			}
 		}
 		if (target === 'custom') {
-			price = 20;
+			price = 30;
 			if (price <= user.money) {
 				user.money = user.money - price;
-				this.sendReply('You have purchased a custom avatar. You need to message an Admin capable of adding (Ask BlakJack or Skarr).');
+				this.sendReply('You have purchased a custom avatar. You need to message an Admin capable of adding (Ask AChampAero).');
 				user.canCustomAvatar = true;
 				this.add(user.name + ' has purchased a custom avatar!');
 			} else {
@@ -474,10 +474,10 @@ var commands = exports.commands = {
 			}
 		}
 		if (target === 'animated') {
-			price = 35;
+			price = 40;
 			if (price <= user.money) {
 				user.money = user.money - price;
-				this.sendReply('You have purchased a custom animated avatar. You need to message an Admin capable of adding (BlakJack or Skarr).');
+				this.sendReply('You have purchased a custom animated avatar. You need to message an Admin capable of adding (AChampAero).');
 				user.canAnimatedAvatar = true;
 				this.add(user.name + ' has purchased a custom animated avatar!');
 			} else {
@@ -496,10 +496,10 @@ var commands = exports.commands = {
 			}
 		}
 		if (target === 'trainer') {
-			price = 30;
+			price = 50;
 			if (price <= user.money) {
 				user.money = user.money - price;
-				this.sendReply('You have purchased a trainer card. You need to message an Admin capable of adding this (BlakJack or Skarr).');
+				this.sendReply('You have purchased a trainer card. You need to message an Admin capable of adding this (AChampAero).');
 				user.canTrainerCard = true;
 				this.add(user.name + ' has purchased a trainer card!');
 			} else {
@@ -507,10 +507,10 @@ var commands = exports.commands = {
 			}
 		}
 		if (target === 'fix') {
-			price = 10;
+			price = 20;
 			if (price <= user.money) {
 				user.money = user.money - price;
-				this.sendReply('You have purchased the ability to alter your avatar or trainer card. You need to message an Admin capable of adding this (BlakJack or Skarr).');
+				this.sendReply('You have purchased the ability to alter your avatar or trainer card. You need to message an Admin capable of adding this (AChampAero).');
 				user.canFixItem = true;
 				this.add(user.name + ' has purchased the ability to set alter their card or avatar!');
 			} else {
@@ -518,7 +518,7 @@ var commands = exports.commands = {
 			}
 		}
 		if (target === 'declare') {
-			price = 25;
+			price = 35;
 			if (price <= user.money) {
 				user.money = user.money - price;
 				this.sendReply('You have purchased the ability to declare (from Admin). To do this message an Admin (~) with the message you want to send. Keep it sensible!');
@@ -621,14 +621,14 @@ var commands = exports.commands = {
 	
 	shop: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('<center><h4><b><u>Kill The Noise Shop</u></b></h4><table border="1" cellspacing ="0" cellpadding="3"><tr><th>Command</th><th>Description</th><th>Cost</th></tr>' +
-			'<tr><td>Symbol</td><td>Buys a custom symbol to go infront of name and puts you at top of userlist (temporary until restart)</td><td>5</td></tr>' +
-			'<tr><td>Custom</td><td>Buys a custom avatar to be applied to your name (you supply)</td><td>20</td></tr>' +
-			'<tr><td>Animated</td><td>Buys an animated avatar to be applied to your name (you supply)</td><td>35</td></tr>' +
-			'<tr><td>Room</td><td>Buys a chatroom for you to own (within reason, can be refused)</td><td>100</td></tr>' +
-			'<tr><td>Trainer</td><td>Buys a trainer card which shows information through a command such as /blakjack (note: third image costs 10 bucks extra, ask for more details)</td><td>40</td></tr>' +
-			'<tr><td>Fix</td><td>Buys the ability to alter your current custom avatar or trainer card (don\'t buy if you have neither)!</td><td>10</td></tr>' +
-			'<tr><td>Declare</td><td>You get the ability to get two declares from an Admin in lobby. This can be used for league advertisement (not server)</td><td>25</td></tr>' +
+		this.sendReplyBox('<center><h4><b><u>Armageddon Exchange Mart</u></b></h4><table border="1" cellspacing ="0" cellpadding="3"><tr><th>Command</th><th>Description</th><th>Cost</th></tr>' +
+			'<tr><td>Symbol</td><td>Buys a custom symbol to go infront of name and puts you at top of userlist (temporary until server restart)</td><td>10</td></tr>' +
+			'<tr><td>Custom</td><td>Buys a custom avatar to be applied to your name (you bring along)</td><td>30</td></tr>' +
+			'<tr><td>Animated</td><td>Buys an animated avatar to be applied to your name (you bring along)</td><td>40</td></tr>' +
+			'<tr><td>Room</td><td>Buys a chatroom for you to own (can be refused for whatever reason!)</td><td>100</td></tr>' +
+			'<tr><td>Trainer</td><td>Buys a trainer card which shows information through a command such as /achampaero (note: third image costs 10 bucks extra, ask for more details)</td><td>50</td></tr>' +
+			'<tr><td>Fix</td><td>Buys the ability to alter your current custom avatar or trainer card (don\'t buy if you have neither or dont know what this is)!</td><td>20</td></tr>' +
+			'<tr><td>Declare</td><td>You get the ability to get two declares from an Admin in lobby. This can be used for league advertisement (not server!)</td><td>35</td></tr>' +
 			'</table><center><table border="1" cellspacing ="0" cellpadding="4"><tr><th>Command</th><th>change converter!</th><th>PAYOUT</th></tr>' +
 		        '<tr><td>coin</td><td>Turns <b>100 bucks</b> into <b>1 coin</b>!</td><td>1 coin</td></tr>' +
 		        '<tr><td>buck</td><td>Turns <b>1 coin</b> into <b>100 bucks</b>!</td><td>100 bucks</td></tr>' +
@@ -908,139 +908,139 @@ var commands = exports.commands = {
 			var userid = toUserid(parts[0]);
 			if (targetUser.userid == userid) {
 			var x = Number(parts[1]);
-			var coins = x;
-			match = true;
-			if (match === true) {
-				line = line + row[i];
-				break;
-			}
-			}
-		}
-		targetUser.coins = coins;
-		targetUser.coins += giveCoins;
-		if (match === true) {
-			var re = new RegExp(line,"g");
-			fs.readFile('config/coins.csv', 'utf8', function (err,data) {
-			if (err) {
-				return console.log(err);
-			}
-			var result = data.replace(re, targetUser.userid+','+targetUser.coins);
-			fs.writeFile('config/coins.csv', result, 'utf8', function (err) {
-				if (err) return console.log(err);
-			});
-			});
-		} else {
-			var log = fs.createWriteStream('config/coins.csv', {'flags': 'a'});
-			log.write("\n"+targetUser.userid+','+targetUser.coins);
-		}
-		var p = 'coins';
-		if (giveCoins < 2) p = 'coin';
-		this.sendReply(targetUser.name + ' was given ' + giveCoins + ' ' + p + '. This user now has ' + targetUser.coins + ' coins.');
-		targetUser.send(user.name + ' has given you ' + giveCoins + ' ' + p + '.');
-		} else {
-			return this.parse('/help givecoins');
-		}
-	},
+			var coins = x;match = true;
+                        if (match === true) {
+                                line = line + row[i];
+                                break;
+                        }
+                        }
+                }
+                targetUser.coins = coins;
+                targetUser.coins += giveCoins;
+                if (match === true) {
+                        var re = new RegExp(line,"g");
+                        fs.readFile('config/coins.csv', 'utf8', function (err,data) {
+                        if (err) {
+                                return console.log(err);
+                        }
+                        var result = data.replace(re, targetUser.userid+','+targetUser.coins);
+                        fs.writeFile('config/coins.csv', result, 'utf8', function (err) {
+                                if (err) return console.log(err);
+                        });
+                        });
+                } else {
+                        var log = fs.createWriteStream('config/coins.csv', {'flags': 'a'});
+                        log.write("\n"+targetUser.userid+','+targetUser.coins);
+                }
+                var p = 'coins';
+                if (giveCoins < 2) p = 'coin';
+                this.sendReply(targetUser.name + ' was given ' + giveCoins + ' ' + p + '. This user now has ' + targetUser.coins + ' coins.');
+                targetUser.send(user.name + ' has given you ' + giveCoins + ' ' + p + '.');
+                } else {
+                        return this.parse('/help givecoins');
+                }
+        },
 
-	takecoins: function(target, room, user) {
-		if(!user.can('hotpatch')) return this.sendReply('You do not have enough authority to do this.');
-		if(!target) return this.parse('/help takecoins');
-		if (target.indexOf(',') != -1) {
-			var parts = target.split(',');
-			parts[0] = this.splitTarget(parts[0]);
-			var targetUser = this.targetUser;
-		if (!targetUser) {
-			return this.sendReply('User '+this.targetUsername+' not found.');
-		}
-		if (isNaN(parts[1])) {
-			return this.sendReply('Very funny, now use a real number.');
-		}
-		var cleanedUp = parts[1].trim();
-		var takeCoins = Number(cleanedUp);
-		var data = fs.readFileSync('config/coins.csv','utf8')
-		var match = false;
-		var coins = 0;
-		var line = '';
-		var row = (''+data).split("\n");
-		for (var i = row.length; i > -1; i--) {
-			if (!row[i]) continue;
-			var parts = row[i].split(",");
-			var userid = toUserid(parts[0]);
-			if (targetUser.userid == userid) {
-			var x = Number(parts[1]);
-			var coins = x;
-			match = true;
-			if (match === true) {
-				line = line + row[i];
-				break;
-			}
-			}
-		}
-		targetUser.coins = coins;
-		targetUser.coins -= takeCoins;
-		if (match === true) {
-			var re = new RegExp(line,"g");
-			fs.readFile('config/coins.csv', 'utf8', function (err,data) {
-			if (err) {
-				return console.log(err);
-			}
-			var result = data.replace(re, targetUser.userid+','+targetUser.coins);
-			fs.writeFile('config/coins.csv', result, 'utf8', function (err) {
-				if (err) return console.log(err);
-			});
-			});
-		} else {
-			var log = fs.createWriteStream('config/coins.csv', {'flags': 'a'});
-			log.write("\n"+targetUser.userid+','+targetUser.coins);
-		}
-		var p = 'coins';
-		if (giveCoins < 2) p = 'coin';
-		this.sendReply(targetUser.name + ' was had ' + takeCoins + ' ' + p + ' removed. This user now has ' + targetUser.coins + ' coins.');
-		targetUser.send(user.name + ' has given you ' + takeCoins + ' ' + p + '.');
-		} else {
-			return this.parse('/help takecoins');
-		}
-	},
+        takecoins: function(target, room, user) {
+                if(!user.can('hotpatch')) return this.sendReply('You do not have enough authority to do this.');
+                if(!target) return this.parse('/help takecoins');
+                if (target.indexOf(',') != -1) {
+                        var parts = target.split(',');
+                        parts[0] = this.splitTarget(parts[0]);
+                        var targetUser = this.targetUser;
+                if (!targetUser) {
+                        return this.sendReply('User '+this.targetUsername+' not found.');
+                }
+                if (isNaN(parts[1])) {
+                        return this.sendReply('Very funny, now use a real number.');
+                }
+                var cleanedUp = parts[1].trim();
+                var takeCoins = Number(cleanedUp);
+                var data = fs.readFileSync('config/coins.csv','utf8')
+                var match = false;
+                var coins = 0;
+                var line = '';
+                var row = (''+data).split("\n");
+                for (var i = row.length; i > -1; i--) {
+                        if (!row[i]) continue;
+                        var parts = row[i].split(",");
+                        var userid = toUserid(parts[0]);
+                        if (targetUser.userid == userid) {
+                        var x = Number(parts[1]);
+                        var coins = x;
+                        match = true;
+                        if (match === true) {
+                                line = line + row[i];
+                                break;
+                        }
+                        }
+                }
+                targetUser.coins = coins;
+                targetUser.coins -= takeCoins;
+                if (match === true) {
+                        var re = new RegExp(line,"g");
+                        fs.readFile('config/coins.csv', 'utf8', function (err,data) {
+                        if (err) {
+                                return console.log(err);
+                        }
+                        var result = data.replace(re, targetUser.userid+','+targetUser.coins);
+                        fs.writeFile('config/coins.csv', result, 'utf8', function (err) {
+                                if (err) return console.log(err);
+                        });
+                        });
+                } else {
+                        var log = fs.createWriteStream('config/coins.csv', {'flags': 'a'});
+                        log.write("\n"+targetUser.userid+','+targetUser.coins);
+                }
+                var p = 'coins';
+                if (giveCoins < 2) p = 'coin';
+                this.sendReply(targetUser.name + ' was had ' + takeCoins + ' ' + p + ' removed. This user now has ' + targetUser.coins + ' coins.');
+                targetUser.send(user.name + ' has given you ' + takeCoins + ' ' + p + '.');
+                } else {
+                        return this.parse('/help takecoins');
+                }
+        },
 
 
-	version: function(target, room, user) {
-		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Server version: <b>'+CommandParser.package.version+'</b> <small>(<a href="http://pokemonshowdown.com/versions#' + CommandParser.serverVersion + '">' + CommandParser.serverVersion.substr(0,10) + '</a>)</small>');
-	},
+        version: function(target, room, user) {
+                if (!this.canBroadcast()) return;
+                this.sendReplyBox('Server version: <b>'+CommandParser.package.version+'</b> <small>(<a href="http://pokemonshowdown.com/versions#' + CommandParser.serverVersion + '">' + CommandParser.serverVersion.substr(0,10) + '</a>)</small>');
+        },
 
-	me: function(target, room, user, connection) {
-		// By default, /me allows a blank message
-		if (target) target = this.canTalk(target);
-		if (!target) return;
+        me: function(target, room, user, connection) {
+                // By default, /me allows a blank message
+                if (target) target = this.canTalk(target);
+                if (!target) return;
 
-		return '/me ' + target;
-	},
+                return '/me ' + target;
+        },
 
-	mee: function(target, room, user, connection) {
-		// By default, /mee allows a blank message
-		if (target) target = this.canTalk(target);
-		if (!target) return;
+        mee: function(target, room, user, connection) {
+                // By default, /mee allows a blank message
+                if (target) target = this.canTalk(target);
+                if (!target) return;
 
-		return '/mee ' + target;
-	},
+                return '/mee ' + target;
+        },
 
-	avatar: function(target, room, user) {
-		if (!target) return this.parse('/avatars');
-		var parts = target.split(',');
-		var avatar = parseInt(parts[0]);
-		if (!avatar || avatar > 294 || avatar < 1) {
-			if (!parts[1]) {
-				this.sendReply("Invalid avatar.");
-			}
-			return false;
-		}
+        avatar: function(target, room, user) {
+                if (!target) return this.parse('/avatars');
+                var parts = target.split(',');
+                var avatar = parseInt(parts[0]);
+                if (!avatar || avatar > 294 || avatar < 1) {
+                        if (!parts[1]) {
+                                this.sendReply("Invalid avatar.");
+                        }
+                        return false;
+                }
 
-		user.avatar = avatar;
-		if (!parts[1]) {
-			this.sendReply("Avatar changed to:\n" +
-					'|raw|<img src="//play.pokemonshowdown.com/sprites/trainers/'+avatar+'.png" alt="" width="80" height="80" />');
-		}
-	},
+                user.avatar = avatar;
+                if (!parts[1]) {
+                        this.sendReply("Avatar changed to:\n" +
+                                        '|raw|<img src="//play.pokemonshowdown.com/sprites/trainers/'+avatar+'.png" alt="" width="80" height="80" />');
+                }
+        },
+
 
 	logout: function(target, room, user) {
 		user.resetName();
