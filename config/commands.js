@@ -437,50 +437,6 @@ var commands = exports.commands = {
 	 * Informational commands
 	 *********************************************************/
 
-	
-    regdate: function(target, room, user, connection) { 
-                if (!this.canBroadcast()) return;
-                if (!target || target == "." || target == "," || target == "'") return this.sendReply('/regdate - Please specify a valid username.'); //temp fix for symbols that break the command
-                var username = target;
-                target = target.replace(/\s+/g, '');
-                var util = require("util"),
-            http = require("http");
-
-                var options = {
-                    host: "www.pokemonshowdown.com",
-                    port: 80,
-                    path: "/forum/~"+target
-                };
-
-                var content = "";   
-                var self = this;
-                var req = http.request(options, function(res) {
-                        
-                    res.setEncoding("utf8");
-                    res.on("data", function (chunk) {
-                content += chunk;
-                    });
-                    res.on("end", function () {
-                        content = content.split("<em");
-                        if (content[1]) {
-                                content = content[1].split("</p>");
-                                if (content[0]) {
-                                        content = content[0].split("</em>");
-                                        if (content[1]) {
-                                                regdate = content[1];
-                                                data = username+' was registered on'+regdate+'.';
-                                        }
-                                }
-                        }
-                        else {
-                                data = username+' is not registered.';
-                        }
-                        self.sendReplyBox(data);
-                    });
-                });
-                req.end();
-        },
-	
 	stats: 'data',
 	dex: 'data',
 	pokedex: 'data',
@@ -1325,6 +1281,69 @@ blak: function(target, room, user){
 			this.logModCommand('The Pokemon of the Day was removed by '+user.name+'.');
 		}
 	},
+	
+	rule: 'rules',
+        rules: function(target, room, user) {
+                if (!this.canBroadcast()) return;
+                this.sendReplyBox('Please follow the rules:<br />' +
+                        '- <a href="http://pokemonshowdown.com/rules">Rules</a><br />' +
+                        '</div>');
+        },
+        
+        leaguerule: 'leaguerules',
+        leaguerules: function(target, room, user) {
+                if (!this.canBroadcast()) return;
+                this.sendReplyBox('Please follow the rules:<br />' +
+                        '- <a href="http://armageddonleague.weebly.com/rules.html">League Rules</a><br />' +
+                        '</div>');
+        },
+        
+        leaguesite: 'site',
+        site: function(target, room, user) {
+                if (!this.canBroadcast()) return;
+                this.sendReplyBox('Link For The Leagues Site<br />' +
+                        '- <a href="http://armageddonleague.weebly.com/">League Site</a><br />' +
+                        '</div>');
+		},
+	
+	faq: function(target, room, user) {
+                if (!this.canBroadcast()) return;
+                target = target.toLowerCase();
+                var buffer = '';
+                var matched = false;
+                if (!target || target === 'all') {
+                        matched = true;
+                        buffer += '<a href="http://www.smogon.com/sim/faq">Frequently Asked Questions</a><br />';
+                }
+                if (target === 'all' || target === 'deviation') {
+                        matched = true;
+                        buffer += '<a href="http://www.smogon.com/sim/faq#deviation">Why did this user gain or lose so many points?</a><br />';
+                }
+                if (target === 'all' || target === 'doubles' || target === 'triples' || target === 'rotation') {
+                        matched = true;
+                        buffer += '<a href="http://www.smogon.com/sim/faq#doubles">Can I play doubles/triples/rotation battles here?</a><br />';
+                }
+                if (target === 'all' || target === 'randomcap') {
+                        matched = true;
+                        buffer += '<a href="http://www.smogon.com/sim/faq#randomcap">What is this fakemon and what is it doing in my random battle?</a><br />';
+                }
+                if (target === 'all' || target === 'restarts') {
+                        matched = true;
+                        buffer += '<a href="http://www.smogon.com/sim/faq#restarts">Why is the server restarting?</a><br />';
+                }
+                if (target === 'all' || target === 'staff') {
+                        matched = true;
+                        buffer += '<a href="http://www.smogon.com/sim/staff_faq">Staff FAQ</a><br />';
+                }
+                if (target === 'all' || target === 'autoconfirmed') {
+                        matched = true;
+                        buffer += 'A user is autoconfirmed when they have won at least one rated battle and has been registered for a week or longer.<br />';
+                }        
+                if (!matched) {
+                        return this.sendReply('The FAQ entry "'+target+'" was not found. Try /faq for general help.');
+                }
+                this.sendReplyBox(buffer);
+        },
 
 	roll: 'dice',
 	dice: function(target, room, user) {
