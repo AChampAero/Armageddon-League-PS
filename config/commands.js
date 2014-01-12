@@ -256,61 +256,182 @@ var commands = exports.commands = {
 		return this.parse('/msg '+this.targetUsername+', /invite '+roomid);
 	},
 	
-	/*********************************************************
+/*********************************************************
 	 * Additional Commands
 	 *********************************************************/
+	 getrandom: 'pickrandom',
+        pickrandom: function (target, room, user) {
+                if (!target) return this.sendReply('/pickrandom [option 1], [option 2], ... - Randomly chooses one of the given options.');
+                if (!this.canBroadcast()) return;
+                var targets;
+                if (target.indexOf(',') === -1) {
+                        targets = target.split(' ');
+                } else {
+                        targets = target.split(',');
+                };
+                var result = Math.floor(Math.random() * targets.length);
+                return this.sendReplyBox(targets[result].trim());
+        },
 
-	getrandom: 'pickrandom',
-	pickrandom: function (target, room, user) {
-		if (!target) return this.sendReply('/pickrandom [option 1], [option 2], ... - Randomly chooses one of the given options.');
-		if (!this.canBroadcast()) return;
-		var targets;
-		if (target.indexOf(',') === -1) {
-			targets = target.split(' ');
-		} else {
-			targets = target.split(',');
-		};
-		var result = Math.floor(Math.random() * targets.length);
-		return this.sendReplyBox(targets[result].trim());
-	},
+        poke: function(target, room, user){
+                if(!target) return this.sendReply('/poke needs a target.');
+                return this.parse('/me pokes ' + target);
+        },
 
-	poke: function(target, room, user){
-		if(!target) return this.sendReply('/poke needs a target.');
-		return this.parse('/me pokes ' + target);
-	},
+        slap: function(target, room, user){
+                if(!target) return this.sendReply('/poke needs a target.');
+                return this.parse('/me slaps ' + target + ' in the face with a pan');
+        },
 
-	slap: function(target, room, user){
-		if(!target) return this.sendReply('/poke needs a target.');
-		return this.parse('/me slaps ' + target + ' in the face with a slipper');
-	},
+        s: function(target, room, user){
+                if(!target) return this.sendReply('/spank needs a target.');
+                return this.parse('/me spanks ' + target + '!');
+        },
+        
+		ideclare: 'image',
+        image: function(target, room, user){
+                if(!target) return this.sendReply('/image needs a link.');
+                return this.parse('/declare  <img src='+ target +'>');
+        },  
+        
+		 tierpoll: 'tiervote',
+        tiervote: function(target, room, user){
+                return this.parse('/poll Tournament Tier?,randombattle,ou,ubers,uu,ru,nu,lc,cap,cc1v1,oumono,1v1,');
+        },
 
-	s: function(target, room, user){
-		if(!target) return this.sendReply('/spank needs a target.');
-		return this.parse('/me spanks ' + target + '!');
-	},
-	
-	ideclare: 'image',
-	image: function(target, room, user){
-		if(!target) return this.sendReply('/image needs a link.');
-		return this.parse('/a |html|  <img src='+ target +'>');
-	},
-
-	tierpoll: 'tiervote',
-	tiervote: function(target, room, user){
-		return this.parse('/poll Tournament Tier?,randombattle,ou,ubers,uu,ru,nu,lc,cap,cc1v1,oumono,1v1,c&e,inversebattle');
-	},
-
-	gurl: function(target, room, user){
-		if(!target) return this.sendReply('/sass needs a target.');
-		return this.parse('/me sasses ' + target + '!');
-	},
+        gurl: function(target, room, user){
+                if(!target) return this.sendReply('/sass needs a target.');
+                return this.parse('/me sasses ' + target + '!');
+        },
        
         twerk: function(target, room, user){
-		 return this.parse('/me  twerks their ass out !');
-	},
-     
-     
-
+                 return this.parse('/me  twerks their ass out!');
+        },
+		
+		pie: function(target, room, user){
+                if(!target) return this.sendReply('/throwpie needs a target.');
+                return this.parse('/me throws pie at ' + target + '!');
+        },
+		
+		boogie: function(target, room, user){
+                 return this.parse('/me  boogies the hell out!');
+        },
+		
+		trip: function(target, room, user){
+                return this.parse('/me trips on the server and crashes into a Garbodor with style!');
+        },
+		
+		flee: function(target, room, user){
+                return this.parse('/me flees and hides into a bush full of bedrills...gets stung!');
+        },
+		
+		eat: function(target, room, user){
+                if(!target) return this.sendReply('/eat needs a target.');
+                return this.parse('/me eats ' + target + '!');
+        },
+		
+		kill: function(target, room, user){
+                if(!target) return this.sendReply('/kill needs a target.');
+                return this.parse('/me kills ' + target + ' and makes it seem like an accident!');
+        },
+		
+		doge: function(target, room, user){
+                return this.parse('/image http://i.imgur.com/F4ix2Zw.jpg');
+        },
+		
+		doge2: function(target, room, user){
+                return this.parse('/image http://0.tqn.com/d/humor/1/0/T/T/-/-/doge-galaxy.jpg');
+        },
+		
+		doge3: function(target, room, user){
+                return this.parse('/image http://www.tapscape.com/wp-content/uploads/2013/12/twinkie-meme.jpg');
+        },
+		
+		doge4: function(target, room, user){
+                return this.parse('/image http://i2.kym-cdn.com/photos/images/newsfeed/000/581/526/3a7.jpg');
+        },
+		
+		doge5: function(target, room, user){
+                return this.parse('/image http://weknowmemes.com/wp-content/uploads/2013/11/fifty-shades-of-doge.jpg');
+        },
+		
+		doge6: function(target, room, user){
+                return this.parse('/image http://weknowmemes.com/wp-content/uploads/2013/11/doge-2.jpg');
+        },
+		
+		doge7: function(target, room, user){
+                return this.parse('/image http://i3.kym-cdn.com/photos/images/newsfeed/000/581/723/a8b.jpg');
+        },
+		
+		doge8: function(target, room, user){
+                return this.parse('/image http://st.elohell.net/public/chill/7f5cc45a8ca931ffebc10da088f4aa93.jpg');
+        },
+		
+		doge9: function(target, room, user){
+                return this.parse('/image https://c479107.ssl.cf2.rackcdn.com/files/38384/article/width668/4c5ny2yv-1387559508.jpg');
+        },
+		
+		doge10: function(target, room, user){
+                return this.parse('/image http://global3.memecdn.com/i-heard-you-like-doge-memes_o_2417527.jpg');
+        },
+		
+		doge11: function(target, room, user){
+                return this.parse('/image http://4.bp.blogspot.com/-2RxHjA9d7lU/Unk6iKQU6kI/AAAAAAAAZus/55bG95S2Cqs/s400/doge+gif+infinity+dr+heckle+funny+wtf+gifs.gif');
+        },
+		
+		doge12: function(target, room, user){
+                return this.parse('/image http://img.gawkerassets.com/img/195noesiwk00ojpg/ku-xlarge.jpg');
+        },
+		
+		doge13: function(target, room, user){
+                return this.parse('/image http://littlefun.org/uploads/5255c7cfe691b277e3aec583_736.jpg');
+        },
+		
+		doge14: function(target, room, user){
+                return this.parse('/image http://i3.kym-cdn.com/photos/images/newsfeed/000/604/397/10e.gif');
+        },
+		
+		doge15: function(target, room, user){
+                return this.parse('/image http://i3.kym-cdn.com/photos/images/newsfeed/000/582/208/e96.gif');
+        },
+		
+		doge16: function(target, room, user){
+                return this.parse('/image http://cdn.uproxx.com/wp-content/uploads/2013/05/internets-england-queen-riding-corgi-doctorwho_Patty-Boots.gif');
+        },
+		
+	members: function(target, room, user) {
+                if (!this.canBroadcast()) return;
+                this.sendReplyBox('<center><b><img src="http://oi40.tinypic.com/14dfrci.jpg"></b><br />' +
+                        
+                        '<b><a href="http://armageddonleague.weebly.com/achamps.html">Champions:</a></b><br />' +
+                        '<font size=2><blink><i><b>AChamp Aero</b></i></blink></font><br />' +
+						'<font size=2><blink><i><b>AChamp Sooper</b></i></blink></font><br />' +
+						'<font size=2><blink><i><b>AChamp Carni</b></i></blink></font><br />' +
+                        '<br />' +
+                        '<b><a href="http://armageddonleague.weebly.com/aelites.html">Elites:</a></b><br />' +
+                        '<font size=2><b>AElite Storm</b> (Water)<br />' +
+                        '<b>AElite Xen</b> (Dragon)<br />' +
+                        '<b>AElite SopS4nd</b> (Rock)<br />' +
+                        '<b>AElite Takashi</b> (Steel)</font><br />' +
+						'<b>AElite Scourage</b> (Fairy)</font><br />' +
+						'<b>AElite Losedude</b> (Poison)</font><br />' +
+                        '<b>AElite Blitzsburn</b> (Fire)</font><br />' +
+						'<br />' +
+                        '<b><a href="http://armageddonleague.weebly.com/aleaders.html">Leaders:</a></b><br />' +
+                        '<b>ALeader Tacos </b> (Steel), <b>ALeader Poppop </b> (Water)  <br />' +
+                        '<b>ALeader Clumzzy</b> (Fairy), <b>ALeader Kinjiro</b> (Ground),<br />' +
+                        '<b>ALeader EpicMan</b> (Psychic), <b>ALeader TChin</b> (Ghost),<br />' +
+                        '<b>ALeader Deo</b> (Electric), <b>ALeader Terra</b> (Dark),<br />' +
+                        '<b>ALeader Chunks</b> (Ice), <b>ALeader Walt</b> (Normal),<br />' +
+                        '<b>ALeader Erice</b> (Poison), <b>ALeader Hoaxer</b> (Bug),<br />' +
+                        '<b>ALeader PokePat</b> (Grass), <b>ALeader Aero</b> (Dragon),<br />' +
+                        '<b>ALeader Yugik</b> (Fighting), <b>ALeader Vionce</b> (Rock),<br />' +
+                        '<b>ALeader Mochaburp</b> (Fire), <b>ALeader Whimsicott</b> (Flying)<br />');
+        },	
+		
+		
+		
+		
 
 	/*********************************************************
 	 * Informational commands
