@@ -1360,10 +1360,9 @@ var commands = exports.commands = {
 		if (target.toLowerCase() == "leagueinc") {
 			return connection.sendTo('lobby', '|html|<div class = "infobox"><center><a href="http://league-inc.weebly.com//"><img src="http://league-inc.weebly.com/uploads/2/1/9/6/21965158/1385953461.png></a><center><br />' +
 			'<center><b><u>Welcome To The LeagueInc!</u></b></center><br />'+
-			'Can you defeat the League?.<br /><br />' +
-			'Fight several Gym Leaders, battle the Elite Four, and face up against the Leagues Champion. Do you have what it takes?'
-			'Enjoy your stay!.<br /><br />' +
-			'</div>');
+			'Can you defeat the League?.!<br /><br />'+ 
+                        'Fight several Gym Leaders, battle the Elite Four, and face up against the Leagues Champion. Do you have what it takes?!<br /><br />'+ 
+                        '</div>');
 	},
 
 	rb: 'roomban',
