@@ -860,13 +860,13 @@ togeon: function(target, room, user) {
              	this.sendReplyBox('<center><img src="http://i.imgur.com/ymTwCWX.png"><img src="http://oi39.tinypic.com/21mzyvr.jpg"><br><font color="black"><b> Ace:</font><font color="gold"><blink> Jolteon </font></blink><br><i><font color="black"> Prepared to be electrified with cuteness :]')},										
 chunk: function(target, room, user){
 				if(!this.canBroadcast()) return;
-				this.sendReplyBox('<img src="http://i.imgur.com/RYpDFXt.png" /><img src="http://i.imgur.com/Q6fN9Pr.png" /><br><font color="black"><b> Ace:</font><br><font color= "red"><blink> Heracross </font></blink><br><i><font color="blue"> "doc are you telling me its 8:25? im late school!"')},	
+				this.sendReplyBox('<center><img src="http://i.imgur.com/RYpDFXt.png" /><img src="http://i.imgur.com/Q6fN9Pr.png" /><br><font color="black"><b> Ace:</font><br><font color= "red"><blink> Heracross </font></blink><br><i><font color="blue"> "doc are you telling me its 8:25? im late school!"')},	
 tchin: function(target, room, user){
 				if(!this.canBroadcast()) return;
-				this.sendReplyBox('<img src="http://i.imgur.com/7Koe3pl.jpg" /><img src="http://i.imgur.com/joZIM4y.png" /><br><font color="black"><b> Ace:</font><br><font color= "Yellow"><blink> Aegislash </font></blink><br><i><font color="blue"> "I hide in the shadows , come and find me..."')},
+				this.sendReplyBox('<center><img src="http://i.imgur.com/7Koe3pl.jpg" /><img src="http://i.imgur.com/joZIM4y.png" /><br><font color="black"><b> Ace:</font><br><font color= "Yellow"><blink> Aegislash </font></blink><br><i><font color="blue"> "I hide in the shadows , come and find me..."')},
 clumzzy: function(target, room, user){
 				if(!this.canBroadcast()) return;
-				this.sendReplyBox('<img src="http://i.imgur.com/DZjP3Vd.png" /><img src="http://i.imgur.com/1rW7t39.png" /><br><font color="black"><b> Ace:</font><br><font color= "red"><blink> Mega Mawile </font></blink><br><i><font color="purple"> "Hey Im ALeader Clumzzy, and in my gym. Dont drop that thun thun thun, eyyy, dont drop that thun thun thuunnnn!."')},
+				this.sendReplyBox('<center><img src="http://i.imgur.com/DZjP3Vd.png" /><img src="http://i.imgur.com/1rW7t39.png" /><br><font color="black"><b> Ace:</font><br><font color= "red"><blink> Mega Mawile </font></blink><br><i><font color="purple"> "Hey Im ALeader Clumzzy, and in my gym. Dont drop that thun thun thun, eyyy, dont drop that thun thun thuunnnn!."')},
 lavxen: function(target, room, user) {  
                  if (!this.canBroadcast()) return;                
              	this.sendReplyBox('<center><img src="http://i.imgur.com/0S08cxO.jpg">')},		
