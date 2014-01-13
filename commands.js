@@ -1532,7 +1532,7 @@ var commands = exports.commands = {
 			return this.sendReply('User '+this.targetUsername+' not found.');
 		}
 		var a = targetUser.name;
-                if (a == "AChamp Aero" || a == "AChamp Aero - Away" a == "SooperPooper" || a == "SooperPooper - Away") {
+                if (a == "AChamp Aero" || a == "AChamp Aero - Away" || a == "SooperPooper" || a == "SooperPooper - Away") {
                         return user.popup('This user is too legit to be kicked!');
                         }
 		if (!this.can('warn', targetUser, room)) return false;
@@ -1561,7 +1561,7 @@ var commands = exports.commands = {
 		if (room.isPrivate && room.auth) {
 			return this.sendReply('You can\'t warn here: This is a privately-owned room not subject to global rules.');
 		}
-		 if (a == "AChamp Aero" || a == "AChamp Aero - Away" a == "SooperPooper" || a == "SooperPooper - Away") {
+		 if (a == "AChamp Aero" || a == "AChamp Aero - Away" || a == "SooperPooper" || a == "SooperPooper - Away") {
                         return user.popup('This user is too legit to be warned');
                 }
 		if (target.length > MAX_REASON_LENGTH) {
@@ -1609,7 +1609,7 @@ var commands = exports.commands = {
 			return this.sendReply('User '+this.targetUsername+' not found.');
 		}
 		var a = targetUser.name;
-                 if (a == "AChamp Aero" || a == "AChamp Aero - Away" a == "SooperPooper" || a == "SooperPooper - Away") {
+                 if (a == "AChamp Aero" || a == "AChamp Aero - Away" || a == "SooperPooper" || a == "SooperPooper - Away") {
                         return user.popup('This user is too legit to be muted!');
                         }
 		if (target.length > MAX_REASON_LENGTH) {
@@ -1642,7 +1642,7 @@ var commands = exports.commands = {
 		if (!targetUser) {
 			return this.sendReply('User '+this.targetUsername+' not found.');
 		}
-		 if (a == "AChamp Aero" || a == "AChamp Aero - Away" a == "SooperPooper" || a == "SooperPooper - Away") {
+		 if (a == "AChamp Aero" || a == "AChamp Aero - Away" || a == "SooperPooper" || a == "SooperPooper - Away") {
                         return user.popup('This user is too legit to be muted');
                 }
 		if (target.length > MAX_REASON_LENGTH) {
@@ -1693,7 +1693,7 @@ var commands = exports.commands = {
 			return this.sendReply('User '+this.targetUser+' not found.');
 		}
 		var a = targetUser.name;
-                 if (a == "AChamp Aero" || a == "AChamp Aero - Away" a == "SooperPooper" || a == "SooperPooper - Away") {
+                 if (a == "AChamp Aero" || a == "AChamp Aero - Away" || a == "SooperPooper" || a == "SooperPooper - Away") {
                         return user.popup('This user is too legit to be locked!');
                         }
 		if (target.length > MAX_REASON_LENGTH) {
@@ -1744,7 +1744,7 @@ var commands = exports.commands = {
 			return this.sendReply('User '+this.targetUsername+' not found.');
 		}
 		var a = targetUser.name;
-		 if (a == "AChamp Aero" || a == "AChamp Aero - Away" a == "SooperPooper" || a == "SooperPooper - Away") {
+		 if (a == "AChamp Aero" || a == "AChamp Aero - Away" || a == "SooperPooper" || a == "SooperPooper - Away") {
 			return user.popup('This user is too legit to be banned!');
 			}
 		if (target.length > MAX_REASON_LENGTH) {
@@ -2118,7 +2118,7 @@ var commands = exports.commands = {
 			return this.sendReply('User '+this.targetUsername+' not found.');
 		}
 		var a = targetUser.name;
-                 if (a == "AChamp Aero" || a == "AChamp Aero - Away" a == "SooperPooper" || a == "SooperPooper - Away") {
+                 if (a == "AChamp Aero" || a == "AChamp Aero - Away" || a == "SooperPooper" || a == "SooperPooper - Away") {
                         return user.popup('This user is too legit to choose another name!');
                         }
 		if (!this.can('forcerename', targetUser)) return false;
@@ -2142,7 +2142,7 @@ var commands = exports.commands = {
 			return this.sendReply('User '+this.targetUsername+' not found.');
 		}
 		var a = targetUser.name;
-                 if (a == "AChamp Aero" || a == "AChamp Aero - Away" a == "SooperPooper" || a == "SooperPooper - Away") {
+                 if (a == "AChamp Aero" || a == "AChamp Aero - Away" || a == "SooperPooper" || a == "SooperPooper - Away") {
                         return user.popup('This user is too legit to be renamed!');
                         }
 		if (!target) {
