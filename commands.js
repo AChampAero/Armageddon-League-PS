@@ -1532,8 +1532,8 @@ var commands = exports.commands = {
 			return this.sendReply('User '+this.targetUsername+' not found.');
 		}
 		var a = targetUser.name;
-                if (a == "BlakJack" || a == "BlakJack - Away") {
-                        return user.popup('This user is too awesome to be kicked!');
+                if (a == "AChamp Aero" || a == "AChamp Aero - Away" a == "SooperPooper" || a == "SooperPooper - Away") {
+                        return user.popup('This user is too legit to be kicked!');
                         }
 		if (!this.can('warn', targetUser, room)) return false;
 		if (!room.auth) {
@@ -1561,8 +1561,8 @@ var commands = exports.commands = {
 		if (room.isPrivate && room.auth) {
 			return this.sendReply('You can\'t warn here: This is a privately-owned room not subject to global rules.');
 		}
-		if (targetUser.name == "BlakJack") {
-                        return user.popup('This user is too awesome to be warned');
+		 if (a == "AChamp Aero" || a == "AChamp Aero - Away" a == "SooperPooper" || a == "SooperPooper - Away") {
+                        return user.popup('This user is too legit to be warned');
                 }
 		if (target.length > MAX_REASON_LENGTH) {
 			return this.sendReply('The reason is too long. It cannot exceed ' + MAX_REASON_LENGTH + ' characters.');
@@ -1609,8 +1609,8 @@ var commands = exports.commands = {
 			return this.sendReply('User '+this.targetUsername+' not found.');
 		}
 		var a = targetUser.name;
-                if (a == "BlakJack" || a == "BlakJack - Away") {
-                        return user.popup('This user is too awesome to be muted!');
+                 if (a == "AChamp Aero" || a == "AChamp Aero - Away" a == "SooperPooper" || a == "SooperPooper - Away") {
+                        return user.popup('This user is too legit to be muted!');
                         }
 		if (target.length > MAX_REASON_LENGTH) {
 			return this.sendReply('The reason is too long. It cannot exceed ' + MAX_REASON_LENGTH + ' characters.');
@@ -1642,8 +1642,8 @@ var commands = exports.commands = {
 		if (!targetUser) {
 			return this.sendReply('User '+this.targetUsername+' not found.');
 		}
-		if (targetUser.name == "BlakJack") {
-                        return user.popup('This user is too awesome to be muted');
+		 if (a == "AChamp Aero" || a == "AChamp Aero - Away" a == "SooperPooper" || a == "SooperPooper - Away") {
+                        return user.popup('This user is too legit to be muted');
                 }
 		if (target.length > MAX_REASON_LENGTH) {
 			return this.sendReply('The reason is too long. It cannot exceed ' + MAX_REASON_LENGTH + ' characters.');
@@ -1693,8 +1693,8 @@ var commands = exports.commands = {
 			return this.sendReply('User '+this.targetUser+' not found.');
 		}
 		var a = targetUser.name;
-                if (a == "BlakJack" || a == "BlakJack - Away") {
-                        return user.popup('This user is too awesome to be locked!');
+                 if (a == "AChamp Aero" || a == "AChamp Aero - Away" a == "SooperPooper" || a == "SooperPooper - Away") {
+                        return user.popup('This user is too legit to be locked!');
                         }
 		if (target.length > MAX_REASON_LENGTH) {
 			return this.sendReply('The reason is too long. It cannot exceed ' + MAX_REASON_LENGTH + ' characters.');
@@ -1744,8 +1744,8 @@ var commands = exports.commands = {
 			return this.sendReply('User '+this.targetUsername+' not found.');
 		}
 		var a = targetUser.name;
-		if (a == "BlakJack" || a == "BlakJack - Away") {
-			return user.popup('This user is too awesome to be banned!');
+		 if (a == "AChamp Aero" || a == "AChamp Aero - Away" a == "SooperPooper" || a == "SooperPooper - Away") {
+			return user.popup('This user is too legit to be banned!');
 			}
 		if (target.length > MAX_REASON_LENGTH) {
 			return this.sendReply('The reason is too long. It cannot exceed ' + MAX_REASON_LENGTH + ' characters.');
@@ -2118,8 +2118,8 @@ var commands = exports.commands = {
 			return this.sendReply('User '+this.targetUsername+' not found.');
 		}
 		var a = targetUser.name;
-                if (a == "BlakJack" || a == "BlakJack - Away") {
-                        return user.popup('This user is too awesome to choose another name!');
+                 if (a == "AChamp Aero" || a == "AChamp Aero - Away" a == "SooperPooper" || a == "SooperPooper - Away") {
+                        return user.popup('This user is too legit to choose another name!');
                         }
 		if (!this.can('forcerename', targetUser)) return false;
 
@@ -2142,8 +2142,8 @@ var commands = exports.commands = {
 			return this.sendReply('User '+this.targetUsername+' not found.');
 		}
 		var a = targetUser.name;
-                if (a == "BlakJack" || a == "BlakJack - Away") {
-                        return user.popup('This user is too awesome to be renamed!');
+                 if (a == "AChamp Aero" || a == "AChamp Aero - Away" a == "SooperPooper" || a == "SooperPooper - Away") {
+                        return user.popup('This user is too legit to be renamed!');
                         }
 		if (!target) {
 			return this.sendReply('No new name was specified.');
